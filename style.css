@@ -1,0 +1,769 @@
+:root{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    font-family: 'Exo 2' ,sans-serif;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+    color: #fff;
+}
+#header .fa-bars{
+    font-size: 3rem;
+    z-index: 10000;
+    cursor: pointer;
+}
+#header .logo{
+    color: #fff;
+    font-size: 2rem;
+}
+#header .logo i{
+    padding: 0 .5rem;
+}
+#header .logo h1{
+    display: inline;
+}   
+#header .logo:hover{
+    text-decoration: none;
+}    
+#header .left .fa-shopping-cart{
+    font-size: 2rem;
+    cursor: pointer;
+} 
+#header .left .search-container{
+    display: inline;
+    position: relative;
+}
+#header .left .search-container #search{
+    position: absolute;
+    top: -1.5rem;
+    right: .8rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 5rem; 
+    outline: none;
+}
+#header .left .search-container #search:hover,
+#header .left .search-container #search:focus{
+    width: 25rem;
+}
+#header .left .search-container .fa-search{
+    position: absolute;
+    top: -.7rem;
+    left: -3.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+    color: #333;
+}
+#header .left .search-container .fa-search:hover{
+    width: 25rem;
+}
+#header .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,.9);
+    padding: 0;
+    display: none;
+}
+#header .navbar ul{
+    height: 100%;
+    width: 35rem;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    flex-flow: column;
+}
+#header .navbar ul li{
+    margin: .5rem 0;
+
+}
+#header .navbar ul li a{
+    display: block;
+    height: 4rem;
+    width: 25rem;
+    background: #fff;
+    color: #333;
+    border-radius: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 4rem;
+    text-decoration: none;
+}
+#header .navbar ul li a:hover{
+    text-decoration: none;
+    background: red;
+    letter-spacing: .3rem;
+    color: #fff;
+}
+#home{
+    
+    background: #333;
+}
+#home .slide{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#home .slide .content h1{
+    font-size: 4rem;
+    color: #fff;
+}
+#home .slide .content p{
+    font-size: 1.7rem;
+    color: #ccc;    
+}
+#home .slide .content .stars{
+    margin: 1rem;
+}
+#home .slide .content .stars i{
+    font-size: 1.5rem;
+    padding-right: .4rem;
+    color: gold;
+}
+#home .slide .content .price{
+    color: red;
+    font-size: 3.5rem;
+    margin: .5rem 0;
+}
+#home .slide .content button{
+    outline: none;
+    border: none;
+    width: 16rem;
+    height: 4rem;
+    background: blueviolet;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: .5rem 0;
+    border-radius: 5rem;
+    text-transform: capitalize;
+}
+#home .slide .content button:hover{
+    background: red;
+    letter-spacing: .1rem;
+}
+#home .slide .image img{
+    width: 50vw;
+
+}
+#home .owl-nav .owl-next{
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 6rem;
+    background: none;
+    outline: none;
+    border: none;
+    right: 1rem;
+}
+#home .owl-nav .owl-prev{
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 6rem;
+    background: none;
+    outline: none;
+    border: none;
+    left: 1rem;
+}
+#home .owl-dots{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#home .owl-dots .owl-dots{
+    border: none;
+    outline: none;
+}
+#product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    width: 100vw;
+}
+#product .heading{
+    color: blueviolet;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 5rem;
+    margin: 2rem 0;
+    position: relative;
+}
+#product .heading::after{
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: .3rem;
+    width: 60%;
+    background: red;
+}
+#product .product-container{
+    width: 90%;
+}
+#product .owl-nav .owl-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 6rem;
+    background: none;
+    outline: none;
+    border: none;
+    right: 1rem;
+}
+#product .owl-nav .owl-prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 6rem;
+    background: none;
+    outline: none;
+    border: none;
+    left: 1rem;
+}
+#product .product-container .title{
+    font-size: 3rem;
+    color: red;
+    margin-top: 5rem;
+    margin-left: 6rem;
+}
+#product .product-container .product-slider .product-card{
+    height: 40rem;
+    width: 30rem;
+    margin: 2rem auto;
+    box-shadow: 0 0 .3rem rgba(0,0,0,.5);
+    border-radius: .5rem;
+    position: relative;
+}
+#product .product-container .product-slider .product-card .image{
+    height: 75%;
+    width: 100%;
+}
+#product .product-container .product-slider .product-card .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#product .product-container .product-slider .product-card .content{
+    height: 25%;
+    width: 100%;
+    text-align: center;
+}
+#product .product-container .product-slider .product-card .content h3{
+    font-size: 3rem;
+    color: blueviolet;
+}
+#product .product-container .product-slider .product-card .content .stars i{
+    color: gold;
+}
+#product .product-container .product-slider .product-card .content .price{
+    font-size: 2rem;
+    color: red;
+}
+#product .product-container .product-slider .product-card .info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    transition-delay: .2s;
+    transform: scale(0);
+}
+#product .product-container .product-slider .product-card:hover .info{
+    transform: scale(1);
+}
+#product .product-container .product-slider .product-card .info h4{
+    font-size: 4rem;
+    color: #fff;
+}
+#product .product-container .product-slider .product-card .info p{
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    color: #ccc;
+    text-align: center;
+}
+#product .product-container .product-slider .product-card .info button{
+    outline: none;
+    border: none;
+    width: 16rem;
+    height: 4rem;
+    background: blueviolet;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: .5rem 0;
+    border-radius: 5rem;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    background: red;
+}
+#product .product-container .product-slider .product-card .info button:hover{
+    background: blueviolet;
+    letter-spacing: .1rem;
+}
+#product .product-container .product-slider .product-card .info .share a{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    background: #fff;
+    color: #eb4d4b;
+    margin: 0 .5rem;
+    border-radius: 5rem;
+}
+#product .product-container .product-slider .product-card .info .share a:hover{
+    text-decoration: none;
+    background: blue;
+    color: #fff;
+}
+#product .product-container .product-slider .product-card .info .share{
+    margin-top: 4rem;
+}
+
+/* review part */
+#review{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background: url('https://startbootstrap.github.io/startbootstrap-clean-blog/img/home-bg.jpg'), linear-gradient(blueviolet, blueviolet) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: screen;
+    position: relative;
+}
+#review .shape{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 103%;
+    width: 100%;
+    background: url('https://startbootstrap.github.io/startbootstrap-clean-blog/img/home-bg.jpg') no-repeat;
+    background-position: center;
+    background-size: 100% 110%;
+}
+#review .owl-nav .owl-next{
+    position: absolute;
+    top: 0%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 6rem;
+    background: none;
+    outline: none;
+    border: none;
+    right: 5rem;
+}
+#review .owl-nav .owl-prev{
+    position: absolute;
+    top: 0%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 6rem;
+    background: none;
+    outline: none;
+    border: none;
+    left: 5rem;
+}
+#review .heading{
+    color: #eb4d4b;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 7rem;
+    margin: 2rem 0;
+    position: relative;
+}
+#review .heading::after{
+    background: #fff;
+}
+#review .box-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#review .box-container .review-slider .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#review .box-container .review-slider .box .image{
+    margin-top: 10rem;
+    margin-left: 3rem;
+}
+#review .box-container .review-slider .box .image img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50% 50% 50% 0;
+    border: .5rem solid #eb4d4b
+}
+#review .box-container .review-slider .box .comment{
+    height: 20rem;
+    width: 45rem;
+    background: #fff;
+    border-radius: 2% 2% 0 40%;
+    padding-top: 2rem;
+}
+#review .box-container .review-slider .box .comment p{
+    color: #333;
+    font-size: 1.6rem;
+    padding: 2rem;
+}
+#review .box-container .review-slider .box .comment p i{
+    color: red;
+    font-size: 2rem;
+    padding: 0rem .5rem;
+}
+#review .box-container .review-slider .box .comment h3{
+    text-align: end;
+    color: red;
+    margin: .5rem 2rem;
+    font-size: 2.5rem;
+
+}
+#offer{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+#offer .heading{
+    color: blueviolet;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 5rem;
+    margin: 2rem 0;
+    position: relative;
+}
+#offer .heading::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    height: .3rem;
+    width: 60%;
+    background: #EB4D4B;
+}
+#offer .image{
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#offer .image .box{
+    height: 25rem;
+    width: 30rem;
+    text-align: center;
+    margin: 2rem;
+}
+#offer .image .box img{
+    height: 20rem;
+    width: 30rem;
+}
+#offer .image .box h3{
+    color: #EB4D4B;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+#offer .deal{
+    background: url('https://startbootstrap.github.io/startbootstrap-agency/assets/img/header-bg.jpg'), linear-gradient(yellow, gray) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: screen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    width: 100%;
+}
+#offer .deal .image img{
+    height: 50vh;
+}
+#offer .deal .content{
+    text-shadow: .1rem .1rem .3rem #333;
+}
+#offer .deal .content h4{
+    font-size: 4rem;
+    color: blueviolet;
+}
+#offer .deal .content p{
+    font-size: 2rem;
+    color: #fff;
+}
+#offer .deal .content .stars i{
+    color: gold;
+    font-size: 1.5rem;
+}
+#offer .deal .content .price{
+    font-size: 3rem;
+    color: #fff;
+}
+#offer .deal .content button{
+    outline: none;
+    border: none;
+    width: 16rem;
+    height: 4rem;
+    background: blueviolet;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: .5rem 0;
+    border-radius: 5rem;
+    text-transform: capitalize;
+}
+#offer .deal .content button:hover{
+    background: #333;
+    letter-spacing: .1rem;
+}
+#brand .brand-slider img{
+    height: 10rem;
+    width: 15rem;
+    margin: 4rem auto;
+}
+
+/* newsletter */
+#newsletter{
+    width: 100vw;
+    background: url('https://startbootstrap.github.io/startbootstrap-clean-blog/img/home-bg.jpg'), linear-gradient(rgba(0,0,255,.4), rgba(0,0,255,.4)) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 6rem 0;
+    text-align: center;
+}
+#newsletter h1{
+    font-size: 6rem;
+    color: #fff;
+}
+#newsletter p{
+    font-size: 3rem;
+    color: #f9f9f9;
+}
+#newsletter input[type="text"]{
+    outline: none;
+    border: none;
+    background: #333;
+    color: #fff;
+    height: 4rem;
+    width: 34rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+#newsletter input[type="text"]::placeholder{
+    color: #ccc;
+}
+#newsletter input[type="submit"]{
+    outline: none;
+    border: none;
+    width: 16rem;
+    height: 4rem;
+    background: #eb4d4b;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 2rem 0;
+    border-radius: 5rem;
+    text-transform: capitalize;
+}
+#newsletter input[type="submit"]:hover{
+    background: #333;
+}
+#footer{
+    padding: 2rem 0;
+    background: #333;
+    width: 100vw;
+}
+#footer .row{
+    width: 100%;
+    margin: 0;
+}
+#footer .row .brand-info{
+    margin: 1rem;
+    padding: 0;
+}
+#footer .row .brand-info a{
+    color: #fff;
+}
+#footer .row .brand-info a:hover{
+    text-decoration: none;
+}
+#footer .row .brand-info a i{
+    padding: 0 .5rem;
+    font-size: 2rem;
+}
+#footer .row .brand-info a h3{
+    display: inline;
+    font-size: 2rem;
+}
+#footer .row .brand-info p{
+    color: #ccc;
+    padding: 2rem;
+    margin: 0;
+    font-size: 1.5rem;
+}
+#footer .row .links{
+    padding: 0;
+    margin: 1rem;
+}
+#footer .row .links h3{
+    font-size: 2rem;
+    color: #fff;
+}
+#footer .row .links .nav-links{
+    display: flex;
+    flex-flow: column;
+}
+#footer .row .links .nav-links a{
+    color: #ccc;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+#footer .row .follow-us{
+    padding: 0;
+    margin: 1rem;
+}
+#footer .row .follow-us h3{
+    font-size: 2rem;
+    color: #fff;
+}
+#footer .row .follow-us .follow-us-links{
+    display: flex;
+    flex-flow: column;
+}
+#footer .row .follow-us .follow-us-links a{
+    color: #ccc;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+.fa-times{
+    transform: translateX(27rem);
+    padding-top: 1rem;
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 55%;
+    }
+    #home{
+        padding-bottom: 4rem;
+    }
+    #home .owl-dots{
+        display: none;
+    }
+    #home .slide{
+        flex-flow: column-reverse;
+    }
+    #home .slide .content{
+        padding: 1rem ;
+    }
+    #home .slide .image img{
+        width: 100vw;
+    }
+    #product .product-container .title{
+        margin-left: 0;
+        text-align: center;
+    }
+    #offer .deal{
+        flex-flow: column;
+    }
+    #offer .deal .image img{
+        height: auto;
+        width: 100%;
+    }
+    #offer .deal .content{
+        text-align: center;
+    }
+}
+@media (max-width:600px){
+    #review .heading{
+        padding-top: 10rem;
+    }
+    #review .box-container .review-slider .box{
+        position: relative;
+        height: 40vh;
+    }
+    #review .box-container .review-slider .box .image{
+        position: absolute;
+        top: 0;
+        margin: 0;
+    }
+    #review .box-container .review-slider .box .image img{
+        border-radius: 5rem;
+    }
+    #review .box-container .review-slider .box .comment{
+        border-radius: 1rem;
+        text-align: center;
+        width: 35rem;
+    }
+    #review .box-container .review-slider .box .comment h3{
+        text-align: center;
+        margin-top: -2rem;
+    }
+    #newsletter h1{
+        font-size: 4rem;
+    }
+    #newsletter p{
+        font-size: 2rem;
+    }
+}
